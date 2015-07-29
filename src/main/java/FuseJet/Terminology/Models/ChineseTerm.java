@@ -21,7 +21,7 @@ public class ChineseTerm implements Comparable<ChineseTerm> {
 
     public ChineseTerm(String term) {
         count = 0;
-        negativeCount = 0;
+        negativeCount = 1;
 //        documentCount = 1;
         dist.add(0);
         this.term = term;
@@ -72,7 +72,7 @@ public class ChineseTerm implements Comparable<ChineseTerm> {
     }
 
     public int accessorVariety() {
-        return rightContexts.size() > leftContexts.size() ? rightContexts.size() : leftContexts.size();
+        return rightContexts.size() < leftContexts.size() ? rightContexts.size() : leftContexts.size();
     }
 
     public void occur() {
@@ -118,7 +118,7 @@ public class ChineseTerm implements Comparable<ChineseTerm> {
 
     public void add(ChineseTerm t) {
         leftContexts.addAll(t.leftContexts);
-        rightContexts.addAll(t.leftContexts);
+        rightContexts.addAll(t.rightContexts);
         count += t.count;
         dist.add(t.count);
         documentCount++;
