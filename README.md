@@ -1,6 +1,6 @@
 # Termolator - Chinese Terminology Extraction and TJet
 
-This package contains NYU's Chinese terminology extraction system and a Jet wrapper to support English Terminology extraction. The system is released under the Apache License, except for the files in sampleRDG/ and sampleBackground/ directories.
+This package contains NYU's Chinese terminology extraction system and a Jet wrapper to support English Terminology extraction. The system is released under the Apache License, except for the files in sampleRDG/ and sampleBackground/ directories. See https://github.com/AdamMeyers/The_Termolator for the English version.
 
 Files in demo/ are taken from Wikipedia and licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) License.
 
