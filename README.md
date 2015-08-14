@@ -50,7 +50,7 @@ where POS_OUTPUT_DIR is the output directory of the Brandeis tagger, CONLL_OUTPU
 
 ## Authors
 
-Termolator is developed by Adam Meyers, Yifan He, Zachary Glass and Shasha Liao.
+Termolator is developed by Adam Meyers, Yifan He, Zachary Glass and Shasha Liao. The English version is available at: https://github.com/AdamMeyers/The_Termolator
 
 The code for the Chinese terminology extractor and the English part-of-speech tagger in this git repository is developed by Yifan He and Shasha Liao.
 
