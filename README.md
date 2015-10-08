@@ -47,6 +47,9 @@ We also provide a Python3 script to convert the word segmenter/pos tagger output
     ./pos2conll.py POS_OUTPUT_DIR CONLL_OUTPUT_DIR CONLL_FILE_LIST
 
 where POS_OUTPUT_DIR is the output directory of the Brandeis tagger, CONLL_OUTPUT_DIR is the directory that we save the output files in CoNLL format, and 
+CONLL_FILE_LIST is an output file: pos2conll.py will create a list of files it has written to CONLL_OUTPUT_DIR in CONLL_FILE_LIST
+
+CONLL_FILE_LIST can then be used as the input file list for run_cn.sh
 
 ## Authors
 

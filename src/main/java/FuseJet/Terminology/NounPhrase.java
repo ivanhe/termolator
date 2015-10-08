@@ -67,6 +67,12 @@ public class NounPhrase {
 			}
             previousWord = words.get(i).word;
 		}
+        if(np.size() > 0){
+            NounPhrase nounPhrase = new NounPhrase(np);
+            nounPhrase.rightToken = "";
+            nounPhrase.leftToken = leftToken;
+            nps.add(nounPhrase);
+        }
 		return nps;
 
 	}

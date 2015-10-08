@@ -15,11 +15,13 @@ public class GeniaNPParser implements NPParser{
 	 */
 
 	public static void main(String[] args) throws IOException {
-		String file = "/Users/shashaliao/Research/FUSE/" +
-				"test.pos";
+		String file = args[0];
+//		String file = "/Users/shashaliao/Research/FUSE/" +
+//				"test.pos";
 		GeniaNPParser extractor = new GeniaNPParser(); 
 		List<NounPhrase> nps = extractor.NPParse(file);
 		for(NounPhrase np: nps){
+			System.err.print("NP: ");
 			System.err.println(np.getSequence());
 		}
 	}
@@ -31,11 +33,17 @@ public class GeniaNPParser implements NPParser{
 		List<Word> words = new ArrayList<Word>();
 		while((line = reader.readLine()) != null){
 			//new line
-			if(line.length() <1){
+			if(line.trim().length() < 1){
 				continue;
 			}
-			Word word = Word.readGeniaToken(line.trim());
-			words.add(word);
+			String[] parts = line.trim().split("\\t");
+			if (parts.length > 3) {
+				Word word = Word.readGeniaToken(line.trim());
+				words.add(word);
+			}
+			else {
+				System.err.println("Skipped line:" + line);
+			}
 		}
 		reader.close();
 		List<NounPhrase> nps = NounPhrase.extractNpsFromGenia(words);
