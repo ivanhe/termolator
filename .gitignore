@@ -6,3 +6,4 @@ config/**
 target/
 out/
 *.out.ignore
+.idea/dictionaries/**

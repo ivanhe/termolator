@@ -51,6 +51,36 @@ CONLL_FILE_LIST is an output file: pos2conll.py will create a list of files it h
 
 CONLL_FILE_LIST can then be used as the input file list for run_cn.sh
 
+## Property File
+
+The parameters for the Chinese property file is explained below:
+
+    # Note that the words lists contain words and their absolute frequencies in a news corpus, whether
+    # a word/character is considered as a stop word/character is determined by the thresholds below
+    stopWordListName = data/CN.nw.wordlist.txt
+    endWordListName = data/CN.endlist.txt
+    forbiddenCharListName = data/CN.charlist.txt
+    # words with frequency higher than this threshold will be filtered out
+    stopThreshold = 50
+    # words with characters higher than this threshold will be filtered out
+    forbiddenThreshold = 800
+    #
+    # The following 3 paramters are currently hard-coded in the system. The values in the properties file
+    # are not used. The hard-coded values are minAV=3 minCount=5 minDocumentCount=3
+    # This behavior can be changed in the constructor of ChineseTypedTermFilter
+    # 1) Threshold for the access variety statistic. Terms with AV less than this will be filtered out
+    # See Feng, Chen, Deng, and Zheng (2004): Accessor Variety Criteria for Chinese Word Extraction.
+    # Computational Linguistics 30 (1)
+    minAV = 5
+    # 2) Minimum absolute count for a term to be included in the output
+    minCount = 3
+    # 3) Terms appear in less than the threshold number of documents will be filtered out 
+    minDocumentCount = 5
+    # 
+    # Percentile of the all terms to output (0.6 means that top 60% of all unfiltered candidates will be returned)
+    terminologyThreshold = 0.6
+
+
 ## Authors
 
 Termolator is developed by Adam Meyers, Yifan He, Zachary Glass and Shasha Liao. The English version is available at: https://github.com/AdamMeyers/The_Termolator
