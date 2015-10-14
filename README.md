@@ -81,6 +81,7 @@ The parameters for the Chinese property file is explained below:
     terminologyThreshold = 0.6
 
 
+
 ## Authors
 
 Termolator is developed by Adam Meyers, Yifan He, Zachary Glass and Shasha Liao. The English version is available at: https://github.com/AdamMeyers/The_Termolator
